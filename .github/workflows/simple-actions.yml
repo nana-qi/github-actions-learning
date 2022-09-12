@@ -1,7 +1,9 @@
 name: Simple Actions Workflow
+
 on: [push]
+
 jobs:
-  runs-on: ubuntu-latest
+  run-github-actions: ubuntu-latest
   steps:
     - name: Simple JS Action
       id: greet
