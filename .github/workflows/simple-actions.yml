@@ -3,12 +3,13 @@ name: Simple Actions Workflow
 on: [push]
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Simple JS Action
-      id: greet
-      uses: actions/hello-world-javascript-action@v1
-      with:
-        who-to-great: SimpleAction
-    - name: Log Greeting Time
-      run: echo "${{ steps.greet.outputs.time }}"
+  Simple-Actions-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-great: SimpleAction
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time }}"
